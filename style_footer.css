@@ -1,0 +1,85 @@
+/* STYLES DU FOOTER M.C.N.
+   Ce fichier gère uniquement l'apparence du bas de page.
+*/
+@import url('mcn_style.css');
+
+.mcn-footer {
+    background-color: var(--mcn-bg-accent); /* Fond sombre cohérent avec le header */
+    padding: 60px 0;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Bloc Logo du Footer */
+.footer-logo {
+    margin-bottom: 25px;
+}
+
+.footer-logo .mcn-logo-main {
+    font-family: "Dyno", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--mcn-yellow);
+    line-height: 1;
+}
+
+.footer-logo .mcn-logo-sub {
+    font-family: "Cicle", sans-serif;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: var(--mcn-white);
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    display: block;
+}
+
+/* Bloc Informations (Projet et École) */
+.footer-info {
+    margin-bottom: 30px;
+}
+
+.footer-info .project-title {
+    font-family: "Dyno", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: var(--mcn-white);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.footer-info .academic-info {
+    font-family: "Cicle", sans-serif;
+    font-weight: 700; /* Cicle Gordita */
+    font-size: 0.9rem;
+    color: var(--mcn-yellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Mentions de Copyright */
+.footer-copyright {
+    font-family: "Cicle", sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: var(--mcn-white);
+    opacity: 0.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mcn-footer {
+        padding: 40px 0;
+    }
+}

@@ -1,0 +1,97 @@
+/* STYLES SPÉCIFIQUES - HISTOIRE APRÈS SHAH JAHAN */
+
+/* Layout principal */
+.history-container {
+    padding: 60px 0;
+}
+
+.history-header {
+    margin-bottom: 80px;
+}
+
+.history-header h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+/* Sections de contenu */
+.content-section {
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Section 1 : Flexbox pour le renversement */
+.reversement-flex {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.reversement-main {
+    flex: 2;
+}
+
+.reversement-sidebar {
+    flex: 1;
+}
+
+/* Grilles */
+.grid-2-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Blocs d'information (Cartes) */
+.info-box {
+    padding: 30px;
+    background-color: #3d3d3d; /* Version légèrement plus claire du fond */
+}
+
+.badge-date {
+    background-color: var(--mcn-orange);
+    color: white;
+    padding: 4px 12px;
+    font-family: "Dyno", sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-right: 15px;
+}
+
+.status-card {
+    padding: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-card h4 {
+    color: var(--mcn-orange);
+    margin-bottom: 5px;
+}
+
+.status-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.5;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reversement-flex, .grid-2-cols, .grid-3-cols {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    
+    .history-header h1 {
+        font-size: 2.8rem;
+    }
+}

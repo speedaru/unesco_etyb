@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCN - Taj Mahal - Histoire après Shah Jahan</title>
+    <link rel="stylesheet" href="mcn_style.css">
+    <link rel="stylesheet" href="style_header.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="stylesheet" href="histoire_style.css">
+</head>
+<body>
+
+    <!-- En-tête M.C.N (Injecté via JS pour la modularité) -->
+    <div id="header"></div>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            });
+    </script>
+
+    <main class="container history-container">
+        
+        <!-- Titre Principal -->
+        <header class="history-header">
+            <h1>
+                Histoire après <br> <span class="text-orange">Shah Jahan</span>
+            </h1>
+            <div class="mcn-transition"></div>
+            <p class="italic text-yellow">
+                De l'emprisonnement de l'Empereur à la consécration mondiale : le destin d'une merveille à travers les siècles.
+            </p>
+        </header>
+
+        <!-- Section 1 : La chute et Aurangzeb -->
+        <section class="content-section">
+            <div class="reversement-flex">
+                <div class="reversement-main">
+                    <h2 class="flex-align-center">
+                        <span class="badge-date">1658</span> Le renversement
+                    </h2>
+                    <p>
+                        Vers 1658, Shah Jahan tombe gravement malade. Cette fragilité déclenche une lutte de pouvoir entre ses fils. 
+                        <strong class="text-orange">Aurangzeb</strong> finit par triompher de ses frères, s'empare du trône et décide d'emprisonner son propre père.
+                    </p>
+                    <p>
+                        Shah Jahan passera les huit dernières années de sa vie en captivité dans le <strong>Fort d'Agra</strong>, 
+                        avec pour seule consolation la vue lointaine sur le Taj Mahal, le mausolée de son épouse bien-aimée. 
+                        À sa mort en 1666, il sera finalement inhumé aux côtés de Mumtaz Mahal par Aurangzeb.
+                    </p>
+                </div>
+                <aside class="reversement-sidebar mcn-card">
+                    <h3>Le saviez-vous ?</h3>
+                    <p>
+                        L'empire moghol commence à se fragmenter réellement après la mort d'Aurangzeb en 1707, 
+                        laissant le Taj Mahal vulnérable aux convoitises extérieures.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Section 2 : Pillages et Déclin -->
+        <section class="content-section">
+            <h2><span class="badge-date">XVIIIe</span> Siècle de turbulences</h2>
+            <div class="grid-2-cols">
+                <div class="info-box">
+                    <h3 class="text-orange">Pillages par les Jats</h3>
+                    <p>
+                        Au fil des siècles, le Taj Mahal subit d'importants dommages dus à la négligence et aux guerres. 
+                        Le monument fut pillé par les Jats et d'autres envahisseurs qui s'emparèrent des métaux précieux 
+                        et des joyaux qui ornaient les structures.
+                    </p>
+                </div>
+                <div class="info-box">
+                    <h3 class="text-orange">Usure du Temps</h3>
+                    <p>
+                        Le climat subtropical d'Agra et le manque d'entretien régulier durant la fragmentation 
+                        de l'Empire Moghol ont accéléré l'érosion du marbre et la dégradation des jardins originaux.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Période Britannique -->
+        <section class="content-section">
+            <h2><span class="badge-date">XIXe</span> L'ère Britannique</h2>
+            <div style="border-left: 2px solid var(--mcn-bg-accent); padding-left: 40px;">
+                <div style="margin-bottom: 40px;">
+                    <h3 class="italic">Une menace inattendue</h3>
+                    <p>
+                        Sous la domination britannique, le monument a failli disparaître. Des projets de vente du marbre blanc 
+                        furent même envisagés. Les pillages continuèrent, défigurant les mosaïques de pierres semi-précieuses.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="italic">La restauration de Lord Curzon</h3>
+                    <p>
+                        Une véritable renaissance patrimoniale s'opère à la fin du XIXe siècle. Le site a été restauré 
+                        et préservé de manière systématique sous l'impulsion de <strong>Lord Curzon</strong>. 
+                        C'est à cette époque que les jardins furent redessinés selon le style actuel, 
+                        plus proche des pelouses britanniques que du jardin fruitier moghol originel.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 : De l'Indépendance à aujourd'hui -->
+        <section style="padding-bottom: 80px;">
+            <h2><span class="badge-date">XXe-XXIe</span> Symbole Mondial</h2>
+            <div class="grid-3-cols">
+                <div class="status-card">
+                    <h4>1947</h4>
+                    <span class="status-label">Indépendance</span>
+                    <p >Le Taj Mahal devient un symbole national de beauté, de paix et d'amour pour l'Inde indépendante.</p>
+                </div>
+                <div class="status-card">
+                    <h4>1983</h4>
+                    <span class="status-label">UNESCO</span>
+                    <p>Inscription officielle au Patrimoine Mondial de l'UNESCO comme chef-d'œuvre universel.</p>
+                </div>
+                <div class="status-card">
+                    <h4>2007</h4>
+                    <span class="status-label">Nouvelles Merveilles</span>
+                    <p>Le monument est élu comme l'une des sept nouvelles merveilles du monde par le grand public global.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer M.C.N -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Import du Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

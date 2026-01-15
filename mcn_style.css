@@ -1,0 +1,113 @@
+/* CHARTE GRAPHIQUE M.C.N. 
+   Médiation Culturelle et Numérique
+*/
+
+@import url('fonts.css');
+
+:root {
+  /* Couleurs Officielles */
+  --mcn-orange: #ea5c0d;      /* Principal */
+  --mcn-orange-dark: #b94503; /* Appoint */
+  --mcn-yellow: #f7af3e;      /* Secondaire (parcimonie) */
+  --mcn-bg-main: #333333;     /* Fond principal */
+  --mcn-bg-accent: #505050;   /* Fond d'appoint */
+  
+  /* Nuances de texte */
+  --mcn-white: #ffffff;
+  --mcn-text-muted: #cccccc;
+}
+
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--mcn-bg-main);
+  color: var(--mcn-white);
+  /* Utilisation de Cicle Fina par défaut pour le texte */
+  font-family: "Cicle", sans-serif;
+  font-weight: 300; 
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TYPOGRAPHIES (DYNO POUR TITRES) */
+h1, h2, h3, h4, .mcn-dyno {
+  font-family: "Dyno", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700; /* Dyno Bold */
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 3.5rem; line-height: 1.1; color: var(--mcn-white); }
+h2 { font-size: 2.2rem; border-left: 5px solid var(--mcn-orange); padding-left: 15px; margin-top: 2rem; }
+h3 { font-size: 1.6rem; color: var(--mcn-yellow); }
+
+p {
+  font-family: "Cicle", sans-serif;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+}
+
+/* ÉLÉMENTS GRAPHIQUES DE LA CHARTE (PAGE 5) */
+
+/* Transition / Séparateur Orange */
+.mcn-transition {
+  width: 80px;
+  height: 4px;
+  background-color: var(--mcn-orange);
+  margin: 30px 0;
+}
+
+/* Encadré de texte / Carte (Utilise le fond d'appoint #505050) */
+.mcn-card {
+  background-color: var(--mcn-bg-accent);
+  padding: 2rem;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+/* Bouton Principal */
+.mcn-button {
+  display: inline-block;
+  background-color: var(--mcn-orange);
+  color: var(--mcn-white);
+  padding: 14px 35px;
+  text-decoration: none;
+  font-family: "Dyno", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mcn-button:hover {
+  background-color: var(--mcn-orange-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Navigation & Liens */
+a {
+  color: var(--mcn-yellow);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--mcn-orange);
+}
+
+/* UTILITAIRES */
+.text-orange { color: var(--mcn-orange); }
+.bg-orange { background-color: var(--mcn-orange); }
+/* .text-center { text-center: center; } */
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }

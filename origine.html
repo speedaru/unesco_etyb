@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCN - Taj Mahal</title>
+    <link rel="stylesheet" href="style_origine.css">
+    <link rel="stylesheet" href="mcn_style.css">
+    <link rel="stylesheet" href="style_header.css">
+    <link rel="stylesheet" href="style_footer.css">
+</head>
+<body>
+    <!-- En-tête M.C.N (Injecté via JS pour la modularité) -->
+    <div id="header"></div>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            });
+    </script>
+
+    <main class="main-layout">
+        <aside class="sidebar">
+            <div class="main-category">ORIGINES & CONSTRUCTION</div>
+            <section class="geo-context">
+                <h3>CONTEXTE GÉOGRAPHIQUE</h3>
+                <p>Le Taj Mahal est situé à Agra, dans l'Uttar Pradesh, au nord de l'Inde. Il repose sur la rive sud du fleuve Yamuna. Le site comprend un jardin moghol symétrique (charbagh) et s'étend sur une superficie totale d'environ 17 hectares.</p>
+            </section>
+            <section class="key-stats">
+                <div class="stats-header">CHIFFRES CLÉS</div>
+                <div class="stats-list">
+                    <p><strong>Début travaux :</strong> 1632</p>
+                    <p><strong>Fin mausolée :</strong> 1648 (env.)</p>
+                    <p><strong>Fin complexe :</strong> 1653</p>
+                    <p><strong>Main d'œuvre :</strong> 22 000 ouvriers</p>
+                    <p><strong>Architecte :</strong> Ustad Ahmad Lahauri</p>
+                </div>
+            </section>
+        </aside>
+
+        <article class="content-area">
+            <section class="intro-text">
+                <h2 class="orange-title">Un Mausolée Impérial</h2>
+                <p>Le Taj Mahal a été commandé par l'empereur moghol <strong>Shah Jahan</strong> au XVIIe siècle en mémoire de son épouse favorite, <strong>Mumtaz Mahal</strong>, décédée en 1631 en donnant naissance à leur 14ème enfant.</p>
+                <p>L'architecture est un exemple exceptionnel du style <strong>indo-islamique moghol</strong>, mêlant des influences persanes, turques et indiennes. Le bâtiment principal est célèbre pour sa symétrie parfaite et son marbre blanc de Makrana.</p>
+            </section>
+            <section class="materials-text">
+                <h2 class="orange-title">Les Matériaux et Artisans</h2>
+                <p>Les matériaux ont été importés de tout le continent asiatique : marbre blanc du Rajasthan, pierres semi-précieuses de Perse, du Tibet, de Chine et du Sri Lanka.</p>
+                <p>Le chantier titanesque aurait mobilisé environ <strong>22 000 personnes</strong>, incluant des esclaves et des maîtres artisans venus d'Europe et d'Asie centrale. Contrairement au mythe populaire, Shah Jahan n'a pas fait mutiler les artisans à la fin des travaux ; ces derniers ont par la suite travaillé à Delhi.</p>
+            </section>
+        </article>
+    </main>
+
+    <section class="fundamental-architects">
+        <h2 class="section-divider-title">ARCHITECTES FONDAMENTAUX</h2>
+        <div class="architect-block">
+            <div class="info">
+                <h3 class="orange-title">Ustad Ahmad Lahauri et Amanat Khan</h3>
+                <p>Parmi la vaste équipe de bâtisseurs, l'architecte <strong>Ustad Ahmad Lahauri</strong> est la figure la plus célèbre, étant aujourd'hui reconnu par le consensus historique comme le concepteur principal du monument et du Fort Rouge de Delhi. Le calligraphe <strong>Amanat Khan</strong> (de son vrai nom Abd-ul-Haq) jouit également d'une immense renommée car il est le seul artisan dont la signature figure officiellement sur le Taj Mahal, marquant son travail exceptionnel sur les inscriptions coraniques.</p>
+            </div>
+            <div class="portrait">
+                <img src="https://www.iranicaonline.org/img/v1/v1f9a021_f1_300.jpg" alt="Signature d'Amanat Khan">
+            </div>
+        </div>
+        <div class="architect-block">
+            <div class="info">
+                <h3 class="orange-title">Ustad Isa et Ismail Khan Rumi</h3>
+                <p>Dans l'imaginaire collectif et les récits traditionnels, le nom d'<strong>Ustad Isa</strong> demeure extrêmement cité, bien que les historiens modernes considèrent souvent son rôle comme secondaire ou légendaire face à celui de Lahauri. Enfin, <strong>Ismail Khan Rumi</strong> se distingue comme le maître d'œuvre du dôme majestueux, un élément architectural si complexe qu'il lui a valu une place de choix parmi les grands spécialistes ayant immortalisé leur savoir-faire sur le site.</p>
+            </div>
+            <div class="portrait">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/%D9%85%D9%88%D9%84%D8%A7%D9%86%D8%A7_%D8%A7%D8%AB%D8%B1_%D8%AD%D8%B3%DB%8C%D9%86_%D8%A8%D9%87%D8%B2%D8%A7%D8%AF_%28cropped%29.jpg" alt="Portrait représentatif">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer M.C.N -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Import du Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

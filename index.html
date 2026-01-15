@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCN - Taj Mahal - Navigation</title>
+    <!-- On lie les fichiers de style qui seront complétés après -->
+    <link rel="stylesheet" href="mcn_style.css">
+    <link rel="stylesheet" href="style_header.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="stylesheet" href="style_main_page.css">
+</head>
+<body>
+    <!-- Emplacement pour le Header importé -->
+    <div id="header"></div>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById("header").innerHTML = html;
+            });
+    </script>
+
+    <div class="main-section">
+        <h1>TAJ MAHAL</h1>
+    </div>
+
+    <main class="container hub-main">
+        <!-- Menu des trois catégories principales avec images circulaires -->
+        <section class="hub-menu">
+            <!-- Catégorie 1 : Historique -->
+            <a href="histoire.html" class="menu-item">
+                <div class="menu-circle">
+                    <!-- Image de remplacement (placeholder) pour l'histoire -->
+                    <img src="https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Histoire" class="circle-img">
+                </div>
+                <div class="menu-text">
+                    <h2>Historique</h2>
+                    <p>Le récit des origines et de l'évolution</p>
+                </div>
+            </a>
+
+            <!-- Catégorie 2 : Géographique -->
+            <a href="geographical.html" class="menu-item">
+                <div class="menu-circle">
+                    <!-- Image de remplacement pour la géographie -->
+                    <img src="https://images.pexels.com/photos/3881104/pexels-photo-3881104.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Géographie" class="circle-img">
+                </div>
+                <div class="menu-text">
+                    <h2>Géographique</h2>
+                    <p>L'implantation et le paysage culturel</p>
+                </div>
+            </a>
+
+            <!-- Catégorie 3 : Conflits -->
+            <a href="conflict.html" class="menu-item">
+                <div class="menu-circle">
+                    <!-- Image de remplacement pour les conflits -->
+                    <img src="https://images.pexels.com/photos/572688/pexels-photo-572688.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Conflits" class="circle-img">
+                </div>
+                <div class="menu-text">
+                    <h2>Conflits</h2>
+                    <p>Débats, enjeux et défis contemporains</p>
+                </div>
+            </a>
+
+            <!-- Catégorie 4 : Origine et construction -->
+            <a href="origine.html" class="menu-item">
+                <div class="menu-circle">
+                    <!-- Image illustrant la phase de construction ou le mausolée principal -->
+                    <img src="https://images.pexels.com/photos/1583339/pexels-photo-1583339.jpeg?auto=compress&cs=tinysrgb&w=400"
+                        alt="Origine et construction" class="circle-img">
+                </div>
+                <div class="menu-text">
+                    <h2>Origine et construction</h2>
+                    <p>La genèse du monument et le contexte impérial</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer M.C.N -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Import du Footer
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+</body>

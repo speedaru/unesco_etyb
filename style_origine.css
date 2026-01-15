@@ -1,0 +1,96 @@
+:root {
+    --bg-color: #1a1a1a;
+    --sidebar-bg: #222222;
+    --accent-orange: #d9591a;
+    --text-grey: #cccccc;
+    --text-white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-grey);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    color: var(--text-white);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 15px; width: 15px;
+    background-color: var(--accent-orange);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.unesco-box { border: 1px solid #444; padding: 5px 15px; font-size: 0.8em; }
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    padding: 40px;
+}
+
+.main-category {
+    background-color: var(--accent-orange);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
+    margin-bottom: 40px;
+}
+
+.sidebar h3 { font-size: 0.9em; letter-spacing: 1px; color: var(--text-white); }
+.stats-list p { border-left: 2px solid var(--accent-orange); padding-left: 10px; margin: 5px 0; }
+
+.orange-title { color: var(--accent-orange); margin-top: 0; }
+
+.fundamental-architects { padding: 40px 80px; border-top: 1px solid #333; }
+.section-divider-title { color: var(--accent-orange); font-size: 2em; margin-bottom: 60px; }
+
+.architect-block { display: flex; gap: 40px; margin-bottom: 60px; align-items: center; }
+.architect-block .info { flex: 2; }
+
+.architect-block .portrait {
+    flex: 1;
+    height: 300px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.architect-block .portrait img {
+    width: 100%;
+    height: 150%;
+    object-fit: cover; 
+}
+
+.architect-block:first-of-type .portrait img {
+    object-fit: contain;
+    background-color: #ffffff; /* Fond blanc pour mieux voir la signature noire */
+}
+
+.bottom-decoration {
+    height: 40px;
+    background-color: var(--accent-orange);
+    width: 300px;
+    margin-left: auto;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+}

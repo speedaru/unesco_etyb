@@ -1,0 +1,87 @@
+/* --- STYLES DU HEADER M.C.N --- */
+@import url('mcn_style.css');
+
+/* Conteneur principal du header */
+.mcn-header {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--mcn-bg-accent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+/* Flexbox pour aligner Logo à gauche et Nav à droite */
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Bloc Logo */
+.mcn-logo-block img {
+    /* src: url("https://i.imgur.com/zOQ4WOl.png"); */
+    max-width: 300px;
+}
+
+.mcn-logo-main {
+    font-family: "Dyno", sans-serif;
+    font-weight: 700; /* Dyno Bold */
+    font-size: 2.2rem;
+    color: var(--mcn-orange);
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.mcn-logo-sub {
+    font-family: "Cicle", sans-serif;
+    font-weight: 500; /* Cicle Semi */
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--mcn-white);
+    opacity: 0.8;
+    line-height: 1.2;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Bouton Retour / Navigation */
+.mcn-back-btn {
+    font-family: "Dyno", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--mcn-white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.mcn-back-btn span {
+    font-size: 1.2rem; /* La flèche est plus grande */
+    transition: transform 0.3s ease;
+}
+
+.mcn-back-btn:hover {
+    color: var(--mcn-orange);
+}
+
+.mcn-back-btn:hover span {
+    transform: translateX(-5px); /* Animation de la flèche au survol */
+}
+
+/* Utilitaires container si non définis ailleurs */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}

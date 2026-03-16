@@ -1,0 +1,122 @@
+/* STYLES SPÉCIFIQUES - PAGE DÉBAT ET CONTROVERSE
+   Toutes les polices (Dyno, Cicle), tailles (1.3rem, 2.2rem, etc.) 
+   et couleurs de base sont héritées de mcn_style.css
+*/
+
+.debats-container {
+    padding: 60px 0 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* En-tête : on écrase juste la couleur par défaut (blanc -> orange) */
+.debats-header h1 {
+    color: var(--mcn-orange);
+    margin-bottom: 20px;
+}
+
+/* Grandes lignes de séparation orange */
+.separator-line {
+    height: 2px;
+    background-color: var(--mcn-orange);
+    width: 100%;
+    margin: 30px 0 60px 0;
+}
+
+/* Blocs de contenu (Flexbox pour aligner Image et Texte) */
+.debat-section {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 70px;
+    align-items: flex-start;
+}
+
+.debat-content {
+    flex: 1.2;
+}
+
+.debat-image {
+    flex: 0.8;
+}
+
+.debat-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Titres H2 : Annulation de la taille globale pour un affichage compact */
+.debat-title {
+    color: var(--mcn-orange);
+    border-left: none; /* Écrase la bordure de mcn_style.css */
+    padding-left: 0;   /* Écrase le padding de mcn_style.css */
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    
+    /* CORRECTIONS AJOUTÉES ICI */
+    font-size: 1.1rem; /* Taille beaucoup plus petite que le 2.2rem par défaut */
+    line-height: 1.4;  /* Rapproche les lignes de texte entre elles */
+    letter-spacing: 1px;
+}
+
+.debat-title.title-white {
+    color: var(--mcn-white);
+}
+
+/* Carré orange avec le numéro (Ajusté à la nouvelle taille du texte) */
+.badge-number {
+    background-color: var(--mcn-orange);
+    color: var(--mcn-white);
+    
+    /* Dimensions réduites pour correspondre au texte 1.1rem */
+    width: 24px; 
+    height: 24px;
+    font-size: 0.9rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    margin-top: 0; /* Alignement parfait avec le haut du texte */
+}
+
+/* Paragraphes : Héritent de "Cicle 300 1.3rem" de mcn_style.css */
+.debat-content p {
+    text-align: justify;
+}
+
+/* Spécifique à la section 3 (Texte en gras) */
+.bold-text {
+    font-weight: 700; /* Hérite de Cicle, applique juste la graisse */
+}
+
+/* Sections sans images (pour limiter la largeur de lecture) */
+.section-no-image .debat-content {
+    max-width: 850px;
+}
+
+/* Section 4 indentée (alignement esthétique avec le texte au-dessus) */
+.section-indented .debat-content {
+    max-width: 850px;
+    margin-left: 47px; 
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 850px) {
+    .debat-section {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .reverse-mobile {
+        flex-direction: column-reverse;
+    }
+
+    .section-indented .debat-content {
+        margin-left: 0;
+    }
+}

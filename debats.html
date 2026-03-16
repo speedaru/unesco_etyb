@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCN - Taj Mahal - Débat et Controverse</title>
+    <!-- Les styles globaux (Polices, tailles, couleurs de base) -->
+    <link rel="stylesheet" href="mcn_style.css">
+    <link rel="stylesheet" href="style_header.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <!-- Le style structurel de cette page -->
+    <link rel="stylesheet" href="debats_style.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <div id="header"></div>
+
+    <main class="container debats-container">
+        
+        <!-- Titre Principal -->
+        <header class="debats-header">
+            <h1>DÉBAT ET CONTROVERSE</h1>
+            <div class="separator-line"></div>
+        </header>
+
+        <!-- 1. Section Tejo Mahalaya (Texte à gauche, Image à droite) -->
+        <section class="debat-section">
+            <div class="debat-content">
+                <h2 class="debat-title">
+                    <span class="badge-number">1</span> 
+                    La théorie du « Tejo Mahalaya » face à la justice
+                </h2>
+                <p>
+                    Malgré son statut d'icône mondiale, le Taj Mahal fait l'objet de théories révisionnistes persistantes, notamment celle popularisée par P.N. Oak, affirmant que le mausolée serait un ancien temple hindou nommé Tejo Mahalaya. Cette hypothèse a été fermement rejetée par les historiens et formellement infirmée par le gouvernement indien en 2015 et 2017. Le débat s'est même porté devant les tribunaux : en 2022, la Haute Cour d’Allahabad a rejeté une pétition demandant l'ouverture de « 22 salles cachées » au sous-sol pour y chercher des idoles, mettant un frein judiciaire aux revendications de propriété des groupes nationalistes.
+                </p>
+            </div>
+            <div class="debat-image">
+                <img src="https://images.pexels.com/photos/1583339/pexels-photo-1583339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+            </div>
+        </section>
+
+        <!-- 2. Section Tourmente Politique (Image à gauche, Texte à droite) -->
+        <section class="debat-section reverse-mobile">
+            <div class="debat-image">
+                <img src="https://images.pexels.com/photos/572688/pexels-photo-572688.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+            </div>
+            <div class="debat-content">
+                <h2 class="debat-title title-white">
+                    <span class="badge-number">2</span> 
+                    Un symbole pris dans la tourmente politique
+                </h2>
+                <p>
+                    Au-delà des tribunaux, le monument s'est retrouvé au cœur d'une guerre culturelle et politique. Des figures influentes, telles que Yogi Adityanath et Sangeet Som, ont parfois dénigré le Taj Mahal, le qualifiant de construction « étrangère » à la culture indienne, voire de symbole de « traîtres ». Cette rhétorique s'est traduite par des actes symboliques forts, comme l'exclusion temporaire du monument du livret touristique officiel de l’Uttar Pradesh en 2017. Aujourd'hui encore, le débat reste vif autour de l'identité du site, dont l'origine musulmane est contestée par certaines franges nationalistes.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. Section Mythe Sanglant (Pleine largeur, texte en gras) -->
+        <section class="debat-section section-no-image">
+            <div class="debat-content">
+                <h2 class="debat-title">
+                    <span class="badge-number">3</span> 
+                    Entre mythe sanglant et véritables cicatrices
+                </h2>
+                <p class="bold-text">
+                    L'histoire du Taj Mahal est également obscurcie par des légendes tenaces, dont la plus célèbre prétend que Shah Jahan aurait fait mutiler les artisans pour empêcher toute reproduction de l'œuvre. Les historiens ont démenti ce mythe du massacre : aucune archive ne corrobore ces faits et les ouvriers ont d'ailleurs continué à travailler sur des projets à Delhi. La réalité des dommages est ailleurs : au XVIIIe siècle, le site a subi de réels pillages par les Jats et d'autres envahisseurs. Par la suite, la négligence, les guerres successives et l'érosion climatique ont causé bien plus de dégâts au bâtiment que la volonté de son créateur.
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. Section Tensions Religieuses (Légèrement indentée, sans image) -->
+        <section class="debat-section section-no-image section-indented">
+            <div class="debat-content">
+                <h2 class="debat-title">
+                    <span class="badge-number">4</span> 
+                    Tensions religieuses actuelles
+                </h2>
+                <p>
+                    De nos jours, le Taj Mahal n'est pas seulement un lieu touristique, mais aussi un espace de tensions religieuses sporadiques. Bien que les rituels non-islamiques y soient interdits, des militants tentent régulièrement d'organiser des cérémonies hindoues (puja) à l'intérieur de l'enceinte, en défi direct aux interdictions officielles. Ces incidents reflètent la complexité de la gestion de ce patrimoine, tiraillé entre sa vocation de merveille universelle et son rôle involontaire dans les débats identitaires de l'Inde moderne.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+</body>
+</html>

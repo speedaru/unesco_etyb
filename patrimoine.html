@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCN - Taj Mahal - Patrimoine et Conservation</title>
+    <!-- Styles globaux -->
+    <link rel="stylesheet" href="mcn_style.css">
+    <link rel="stylesheet" href="style_header.css">
+    <link rel="stylesheet" href="style_footer.css">
+    <!-- Style spécifique à cette page -->
+    <link rel="stylesheet" href="patrimoine_style.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <div id="header"></div>
+
+    <main class="container patrimoine-container">
+        
+        <!-- Bloc Introduction -->
+        <section class="intro-block">
+            <h1>PATRIMOINE ET CONSERVATION</h1>
+            <p>
+                Le Taj Mahal, bien plus qu'un chef-d'œuvre architectural, est un témoin fragile de l'histoire. De sa construction à nos jours, sa préservation représente un défi constant mêlant enjeux environnementaux, politiques et culturels.
+            </p>
+        </section>
+
+        <!-- Section 1 : Historique -->
+        <section>
+            <h2 class="section-heading">HISTORIQUE DE LA PRÉSERVATION</h2>
+            
+            <div class="patrimoine-grid">
+                <!-- Carte Gauche -->
+                <div class="patrimoine-card">
+                    <h3>LES PREMIERS DOMMAGES</h3>
+                    <p>
+                        Au fil des siècles, le Taj Mahal a subi des détériorations importantes. Celles-ci furent causées par la <span class="text-orange">négligence</span> successive des administrateurs, les effets dévastateurs des guerres régionales, mais également par l'érosion naturelle due au climat subtropical et à la mousson.
+                    </p>
+                </div>
+
+                <!-- Carte Droite -->
+                <div class="patrimoine-card">
+                    <h3>LA RESTAURATION BRITANNIQUE</h3>
+                    <p>
+                        Un tournant majeur dans la conservation du site a eu lieu durant la période britannique (XIXe siècle). Sous l'impulsion de Lord Curzon, vice-roi des Indes, un vaste projet de restauration fut entrepris pour sauver le monument de la ruine, redéfinissant notamment les jardins selon une esthétique plus "anglaise" qui perdure en partie aujourd'hui.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 : UNESCO (Pleine largeur) -->
+        <section>
+            <h2 class="section-heading">PROTECTION MODERNE ET UNESCO</h2>
+            
+            <!-- On utilise la grille "single-col" pour que la carte prenne toute la largeur -->
+            <div class="patrimoine-grid single-col">
+                <div class="patrimoine-card">
+                    <p style="margin-bottom: 15px;">
+                        Depuis l'indépendance de l'Inde en 1947, le Taj Mahal est devenu un symbole national incontournable. Sa protection s'est intensifiée face aux menaces de la modernité.
+                    </p>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1983 - Classement UNESCO</div>
+                        <p>Le monument est inscrit au patrimoine mondial de l'UNESCO, reconnu comme "le joyau de l'art musulman en Inde".</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">1996 - Taj Trapezium Zone (TTZ)</div>
+                        <p>Face au jaunissement du marbre causé par les pluies acides et la pollution atmosphérique, la Cour Suprême de l'Inde interdit les industries polluantes dans une zone définie autour du monument (la TTZ).</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2003 - Le Corridor Héritage</div>
+                        <p>Abandon du projet controversé "Taj Heritage Corridor". Ce projet commercial menaçait l'intégrité structurelle et visuelle du site entre le fort d'Agra et le Taj Mahal. Son annulation marque une victoire pour la conservation du site.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 : Défis Contemporains -->
+        <section>
+            <h2 class="section-heading">DÉFIS CONTEMPORAINS</h2>
+            
+            <div class="patrimoine-grid" style="margin-bottom: 0;">
+                <!-- Carte Gauche -->
+                <div class="patrimoine-card">
+                    <h3>LA POLLUTION</h3>
+                    <p>
+                        Malgré la zone de protection (TTZ), la pollution de l'air et celle du fleuve Yamuna restent des menaces critiques. Les insectes attirés par les eaux polluées du fleuve tachent régulièrement le marbre, nécessitant des nettoyages à l'argile qui, à terme, peuvent fragiliser la pierre.
+                    </p>
+                </div>
+
+                <!-- Carte Droite -->
+                <div class="patrimoine-card">
+                    <h3>CONTEXTE POLITIQUE</h3>
+                    <p>
+                        Aujourd'hui, le site se trouve au cœur de débats identitaires. Son origine moghole (musulmane) est parfois contestée ou minimisée par certains courants politiques, créant des tensions autour de la narration historique présentée aux visiteurs.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts pour l'inclusion des composants -->
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+
+</body>
+</html>

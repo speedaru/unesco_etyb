@@ -1,0 +1,107 @@
+/* STYLES SPÉCIFIQUES - PAGE PATRIMOINE ET CONSERVATION
+   Mise en page des grilles, annulation des bordures globales, et couleurs spécifiques.
+*/
+
+.patrimoine-container {
+    padding: 60px 0 100px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* 1. Bloc Introduction */
+.intro-block {
+    border-left: 4px solid var(--mcn-orange);
+    padding-left: 25px;
+    margin-bottom: 80px;
+}
+
+.intro-block h1 {
+    color: var(--mcn-orange) !important; /* Écrase le h1 blanc global */
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2.8rem;
+}
+
+.intro-block p {
+    max-width: 850px;
+    margin-bottom: 0;
+}
+
+/* 2. Titres de sections (H2) */
+.section-heading {
+    color: var(--mcn-orange) !important; /* Écrase le h2 blanc global */
+    border-left: none !important;        /* Supprime la barre verticale de mcn_style.css */
+    padding-left: 0 !important;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    position: relative;
+    font-size: 1.8rem;
+}
+
+/* La barre horizontale orange sous le titre (comme sur la maquette) */
+.section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 350px; 
+    height: 2px;
+    background-color: var(--mcn-orange);
+}
+
+/* 3. Grilles pour aligner les cartes à l'horizontale */
+.patrimoine-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+/* Grille à une seule colonne pour la section du milieu (UNESCO) */
+.patrimoine-grid.single-col {
+    grid-template-columns: 1fr;
+}
+
+/* 4. Les Cartes grises */
+.patrimoine-card {
+    background-color: var(--mcn-bg-accent); /* Fond gris #505050 */
+    padding: 35px;
+    border-left: 4px solid var(--mcn-orange); /* Barre orange à gauche des cartes */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.patrimoine-card h3 {
+    color: var(--mcn-white) !important; /* Écrase le h3 jaune global */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.patrimoine-card p {
+    margin-bottom: 0;
+    text-align: justify;
+    color: var(--mcn-text-muted);
+}
+
+/* 5. Chronologie (Section UNESCO) */
+.timeline-item {
+    margin-top: 25px;
+}
+
+/* Titre des dates (ex: 1983 - Classement UNESCO) */
+.timeline-date {
+    color: var(--mcn-orange);
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+/* Responsive (Tablettes et Mobiles) */
+@media (max-width: 850px) {
+    .patrimoine-grid {
+        grid-template-columns: 1fr; /* Les cartes passent les unes sous les autres */
+    }
+    .section-heading::after {
+        width: 100%;
+    }
+}
